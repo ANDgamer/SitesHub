@@ -1,0 +1,68 @@
+::-webkit-scrollbar {
+	width: 5px;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: black ;
+}
+
+:root {
+	--viewport-height: 100vh;
+	--header-height: 55px;
+}
+
+*,
+body,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+	-webkit-tap-highlight-color: #00000000;
+	font-family: 'Quicksand', sans-serif;
+}   
+
+html,
+body,
+header {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+	user-select: none;
+}
+
+button {
+	cursor: pointer;
+	user-select: none;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	display: flex;
+}
+
+button:active {
+	transform: scale(0.9);
+}
+
+header {
+	height: var(--header-height);
+	position: fixed;
+	border-bottom: 2px solid black;
+	background-color: rgb(220, 220, 220);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	overflow-y: scroll;
+	margin-top: var(--header-height);
+	height: calc(var(--viewport-height) - var(--header-height));
+}
+
+
+@media (max-width: 500px) {
+	:root {
+		--viewport-height: 93vh;
+	}
+}
