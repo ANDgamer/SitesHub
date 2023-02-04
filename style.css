@@ -10,6 +10,30 @@
 :root {
 	--viewport-height: 100vh;
 	--header-height: 55px;
+	--header-bg: rgb(220, 220, 220);
+}
+
+/*------------------- themes -------------------*/
+
+
+html.LightMode {
+	
+}
+
+html.NightMode {
+	
+}
+
+@media (prefers-color-scheme: light) {
+	html.AutoMode {
+		
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	html.AutoMode {
+		
+	}
 }
 
 *,
@@ -48,10 +72,34 @@ header {
 	height: var(--header-height);
 	position: fixed;
 	border-bottom: 2px solid black;
-	background-color: rgb(220, 220, 220);
+	background-color:var(--header-bg);
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+}
+
+header h1 {
+	margin: 0 10px;
+}
+
+header .tools-blok {
+	display: flex;
+	align-items: center;
+}
+
+header img {
+	width: 40px;
+	height: 40px;
+	margin: 0 10px;
+}
+
+header .user-select span, select{
+	font-size: 1.3rem;
+}
+
+header .user-select select{
+	background-color: var(--header-bg);
+	border-radius: 5px;
 }
 
 section {
@@ -60,9 +108,74 @@ section {
 	height: calc(var(--viewport-height) - var(--header-height));
 }
 
+/*---------- settings-blok ----------*/
+
+.settings-blok.open {
+	transition: 0.2s ease-out;
+	transform: translateY(0);
+}
+
+.settings-blok.close {
+	transition: 0.2s ease-out;
+}
+
+.settings-blok {
+	top: 0;
+	right: 0;
+	border: 2px solid black;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: var(--header-bg);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
+	width: fit-content;
+	margin-top: var(--header-height);
+	margin-right: 5px;
+	position: absolute;
+	transform: translateY(-100%);
+	z-index: -1;
+}
+
+.settings-blok img {
+	width: 45px;
+	height: 45px;
+	margin: 2px;
+}
+
+.settings-blok button {
+	margin: 2px;
+	border-radius: 7px;
+}
+
+.settings-blok button.selected {
+	border: 2px solid black;
+}
+
+.settings-blok button.selected img{
+	width: 43px;
+	height: 43px;
+}
+
+.elements-view {
+	display: flex;
+}
+
+.theme-selector {
+	display: flex;
+}
+
+/*------------------- adaptation -------------------*/
 
 @media (max-width: 500px) {
 	:root {
 		--viewport-height: 93vh;
+	}
+}
+
+@media (max-width: 385px) {
+	:root {
+		--header-height: 75px;
 	}
 }
