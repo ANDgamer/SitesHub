@@ -76,6 +76,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 2;
 }
 
 header h1 {
@@ -111,12 +112,7 @@ section {
 /*---------- settings-blok ----------*/
 
 .settings-blok.open {
-	transition: 0.2s ease-out;
 	transform: translateY(0);
-}
-
-.settings-blok.close {
-	transition: 0.2s ease-out;
 }
 
 .settings-blok {
@@ -135,7 +131,8 @@ section {
 	margin-right: 5px;
 	position: absolute;
 	transform: translateY(-100%);
-	z-index: -1;
+	transition: 0.2s ease-out;
+	z-index: 1;
 }
 
 .settings-blok img {
@@ -158,11 +155,7 @@ section {
 	height: 43px;
 }
 
-.elements-view {
-	display: flex;
-}
-
-.theme-selector {
+.elements-view, .theme-selector {
 	display: flex;
 }
 
