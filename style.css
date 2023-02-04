@@ -17,23 +17,23 @@
 
 
 html.LightMode {
-	
+	filter: invert(.05);
 }
 
 html.NightMode {
-	filter: invert(1);
+	filter: invert(.95);
 	background-color: rgb(200, 200, 200);
 }
 
 @media (prefers-color-scheme: light) {
 	html.AutoMode {
-		
+		filter: invert(.05);
 	}
 }
 
 @media (prefers-color-scheme: dark) {
 	html.AutoMode {
-		filter: invert(1);
+		filter: invert(.95);
 		background-color: rgb(200, 200, 200);
 	}
 }
