@@ -106,6 +106,7 @@ header .user-select select{
 }
 
 section {
+	width: 100%;
 	overflow-y: scroll;
 	margin-top: var(--header-height);
 	height: calc(var(--viewport-height) - var(--header-height));
@@ -161,6 +162,31 @@ section {
 	display: flex;
 }
 
+section .wrapper{
+	margin: 25px;
+	width: calc(100% - 50px);
+	display: grid;
+/*	grid-template: repeat(auto-fit, 250px) / repeat(4, 1fr);*/
+	grid-gap: 25px;
+}
+
+/*.wrapper {
+	width: 100%;
+	padding: 15px;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: repeat(auto-fit, max(100px, 300px));
+	grid-template-rows: repeat(auto-fit, 200px);
+	grid-auto-columns: minmax(200px, 300px);
+	grid-auto-rows: minmax(200px, 300px);
+}*/
+
+.box {
+	height: 250px;
+	border: 2px solid black;
+	border-radius: 20px;
+}
+
 /*------------------- adaptation -------------------*/
 
 @media (max-width: 500px) {
@@ -172,5 +198,41 @@ section {
 @media (max-width: 385px) {
 	:root {
 		--header-height: 75px;
+	}
+}
+
+@media (max-width: 2300px){
+	section .wrapper{
+		grid-template: repeat(auto-fit, 250px) / repeat(6, 1fr);
+	}
+}
+
+@media (max-width: 1975px){
+	section .wrapper{
+		grid-template: repeat(auto-fit, 250px) / repeat(5, 1fr);
+	}
+}
+
+@media (max-width: 1650px){
+	section .wrapper{
+		grid-template: repeat(auto-fit, 250px) / repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 1325px){
+	section .wrapper{
+		grid-template: repeat(auto-fit, 250px) / repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 1000px){
+	section .wrapper{
+		grid-template: repeat(auto-fit, 250px) / repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 675px){
+	section .wrapper{
+		grid-template: repeat(auto-fit, 250px) / repeat(1, 1fr);
 	}
 }
