@@ -70,6 +70,11 @@ button:active {
 	transform: scale(0.95);
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
 header {
 	height: var(--header-height);
 	position: fixed;
@@ -166,26 +171,29 @@ section .wrapper{
 	margin: 25px;
 	width: calc(100% - 50px);
 	display: grid;
-/*	grid-template: repeat(auto-fit, 250px) / repeat(4, 1fr);*/
 	grid-gap: 25px;
 }
-
-/*.wrapper {
-	width: 100%;
-	padding: 15px;
-	display: grid;
-	grid-gap: 15px;
-	grid-template-columns: repeat(auto-fit, max(100px, 300px));
-	grid-template-rows: repeat(auto-fit, 200px);
-	grid-auto-columns: minmax(200px, 300px);
-	grid-auto-rows: minmax(200px, 300px);
-}*/
 
 .box {
 	height: 250px;
 	border: 2px solid black;
 	border-radius: 20px;
+	background-color: var(--header-bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	cursor: pointer;
 }
+
+.box:active{
+	transform: scale(0.98);
+}
+
+.back-button {
+	display: none;
+}
+
 
 /*------------------- adaptation -------------------*/
 
