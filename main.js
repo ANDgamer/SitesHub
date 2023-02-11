@@ -95,7 +95,6 @@ const answersPhysics = [
     [3, 9, 1, 7, 11, 4, 5, 8, 6, 10],
     [8, 5, 1, 4, 7, 10, 12, 2, 9, 6],
   ],
-
   [
     [12, 4, 13, 9, 1, 5, 11, 8, 3, 6],
     [11, 1, 12, 5, 10, 3, 9, 4, 13, 7],
@@ -189,7 +188,16 @@ function validate(answers) {
   const value = searchBtn.value.trim();
   if (value > 0 && value <= answers.length) {
     getAnswers(answers, value - 1);
-  } else {
+  } 
+  else if (value == 69) {
+  	answersHTML.innerHTML =
+      '<h2 class="warning">You are GEY</h2>';
+  }
+  else if (value == 2004) {
+  	answersHTML.innerHTML =
+      '<h2 class="warning">The site was made by Andrii and Bohdan</h2>';
+  }
+  else {
     answersHTML.innerHTML =
       '<h2 class="warning">Ви ввели неіснуючий номер білету</h2>';
   }
