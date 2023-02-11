@@ -99,7 +99,7 @@ function validate(answers) {
     getAnswers(answers, value - 1);
   } else {
     answersHTML.innerHTML =
-      '<h2 class="warning">Ви ввели неіснуючий номер білета</h2>';
+      '<h2 class="warning">Ви ввели неіснуючий номер білету</h2>';
   }
 }
 

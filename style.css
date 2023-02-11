@@ -203,7 +203,7 @@ section .wrapper{
 .answers__wrapper {
 	margin-bottom: 50px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 p.answers__number {}
@@ -243,15 +243,37 @@ td {
 /* текст, який виводиться, коли користувач вводить неправильний білет, щоб змінити клас(тег) зайди в main.js 102 рядок */
 h2.warning {}
 
-.search {}
-/* кнопка пошуку */
+.search, .confirm-btn {
+	border-radius:5px;
+	border: 1px solid black;
+	font-size: 1.05rem;
+}
+
+.search {
+	background-color: var(--header-bg);
+	padding: 8px;
+}
+
+.confirm-btn {
+	background-color: var(--header-bg);
+	padding: 8px 20px;
+	margin-left: 20px;
+}
+
+.confirm-btn:active {
+	transform: scale(0.95);
+}
+
+.answers p {
+	margin-bottom: 20px;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
 
 #confirmPDR {}
 
 #confirmPhysics {}
 
-.confirm-btn {}
-/* кнопки підтвердження запиту */
 
 /*------------------- adaptation -------------------*/
 
