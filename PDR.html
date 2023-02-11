@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="AutoMode PDR">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -99,3 +100,61 @@
     <script src="main.js"></script>
   </body>
 </html>
+=======
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/svg" href="images/main-icon.svg">
+	<title>SitesHub</title>
+</head>
+<body>
+	<header>
+		<button>
+			<a href="index.html">
+				<img src="images\back.svg">
+			</a>
+		</button>
+		<h1>SitesHub</h1>
+		<div class="tools-blok">
+	    	<button onclick="SidebarBut()">
+				<img src="images\settings.svg">
+			</button>
+		</div>
+	</header>
+	<div class="settings-blok sidebar" id="mySidebar" style="margin-left: calc(var(--sidebar-width) * -1)">
+			<h3>View:</h3>
+			<div class="elements-view">
+				<button class="" id="" onclick="">
+					<img src="images\tiles-nine.svg">
+				</button>
+				<button class="" id="" onclick="">
+					<img src="images\tiles-four.svg">
+				</button>
+				<button class="" id="" onclick="">
+					<img src="images\list.svg">
+				</button>
+			</div>
+			<h3>Theme:</h3>
+			<div class="theme-selector">
+				<button class="" id="LightModeButton" onclick="LightModeSelect()">
+					<img src="images/light_mode.svg">
+				</button>
+				<button class="" id="NightModeButton" onclick="NightModeSelect()">
+					<img src="images/night_mode.svg">
+				</button>
+				<button class="selected" id="AutoModeButton" onclick="AutoModeSelect()">
+					<img src="images/auto_mode.svg">
+				</button>
+			</div>
+		</div>
+	<section onclick="SidebarForciblyClose()">
+		
+	</section>
+	<script src="main.js"></script>
+</body>
+</html>
+>>>>>>> 24602b190952e948e303eb325d7d3a839829556e
