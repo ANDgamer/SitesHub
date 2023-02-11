@@ -198,8 +198,64 @@ section .wrapper{
 	display: none;
 }
 
+/*------------------- table -------------------*/
+
+.answers__wrapper {
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-around;
+}
+
+p.answers__number {}
+/* текст з номером білету, щоб змінити клас(тег) зайди в main.js 102 рядок */
+
+
+.container {
+	margin: 30px auto;
+ 	width: 80vw;
+}
+
+.container h3 {
+	margin-bottom: 10px;
+}
+
+table {
+	width: 100%;
+	margin-bottom: 20px;
+	table-layout: fixed;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+th {
+    background: var(--header-bg);
+}
+
+td {
+	padding: 5px 0;
+}
+
+/* текст, який виводиться, коли користувач вводить неправильний білет, щоб змінити клас(тег) зайди в main.js 102 рядок */
+h2.warning {}
+
+.search {}
+/* кнопка пошуку */
+
+#confirmPDR {}
+
+#confirmPhysics {}
+
+.confirm-btn {}
+/* кнопки підтвердження запиту */
 
 /*------------------- adaptation -------------------*/
+
+
 
 @media (max-width: 500px) {
 	:root {
