@@ -198,6 +198,10 @@ section .wrapper{
 	display: none;
 }
 
+.box.locked {
+	filter: blur(2px);
+}
+
 /*------------------- table -------------------*/
 
 .answers__wrapper {
@@ -240,7 +244,6 @@ td {
 	padding: 5px 0;
 }
 
-/* текст, який виводиться, коли користувач вводить неправильний білет, щоб змінити клас(тег) зайди в main.js 102 рядок */
 h2.warning {}
 
 .search, .confirm-btn {
